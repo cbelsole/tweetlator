@@ -1,0 +1,17 @@
+language: go
+
+sudo: false
+
+matrix:
+  include:
+    - go: '1.8'
+
+before_script:
+  - go get -v ./...
+
+script:
+  - go test -v -race ./...
+
+env:
+  global:
+  - secure: "MWlGBRjIUt5FtjtmkuZvQHWIhl9zViKO2NTItajTX+qPQYi7E70aTEb4i4KMLtK60OcuzvM4lihBPetEpDDcOyx9du8JD7ywoRHIWQKxBZGWfWPt08lkRoy9DdHUZcTvGCyH5+F53KU0EJjwo/VODWQborkJ+bPJ7bNW9uwPiUw="
